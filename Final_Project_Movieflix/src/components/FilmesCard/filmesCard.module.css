@@ -1,0 +1,118 @@
+.cardContainer {
+    display: flex;
+    justify-content: right;
+}
+
+.cardContent {
+    position: relative;
+    z-index: 1;
+    line-break: loose;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContainer:hover .cartIcon {
+    position: relative;
+    top: -60%;
+    z-index: 80;
+    transition: all 200ms ease;
+    transform: translateX(100%) scale(1.2);
+}
+
+.cardImg {
+    filter: saturate(var(--value, -20));
+    min-height: 25rem;
+    object-fit: cover;
+    filter: grayscale(var(--value, 100%)); --value:48%
+}
+
+.cardContainer:hover .precoFilme {
+    position: relative;
+    top: -26rem;
+    transform: scale(5);
+    z-index: 90;
+    color: #fff;
+    transition: all 200ms ease;
+    transform: translateX(-10%);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.699);
+    width: 50%;
+}
+
+.cardContainer:hover {
+    transform: scale(1.02);
+    transition: all 250ms linear;
+}
+
+.cardContainer:hover .cardImg {
+    transition: all 250ms linear;
+    filter: grayscale(var(--value, 100%)); --value:10%;
+    filter: saturate(var(--value, 5)); --value:1.5;
+
+}
+
+.titleCard {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.rankingFilmes {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2F7F2;
+    width: 2rem;
+    height: 3rem;
+    z-index: 100;
+    left: 78%;
+    margin-top: .3rem;
+    animation: flag 3s ease-in-out infinite;
+}
+
+.btn:hover{
+    background-color: gray;
+}
+
+.btn:active{
+    background-color: red;
+    color: pink;
+}
+
+@keyframes flag {
+    0%, 100% {
+        border-left: 20px solid #c51e23;
+        border-right: 20px solid #c51e23;
+        border-bottom: 15px solid transparent;
+        filter: drop-shadow(1px 5px 3px #111);
+    }
+    50% {
+        border-left: 20px solid #c51e23;
+        border-right: 20px solid #c51e23;
+        border-bottom: 12px solid transparent;
+        filter: drop-shadow(2px 1px 1px #111);
+    }
+}
+
+.cartIcon {
+   display: flex;
+   align-items: center;
+   padding: 1.1rem;
+   width: 35%;
+}
+
+.cartIcon .btn:hover {
+    cursor: pointer;
+    transition: all 200ms ease;
+    background-color: #c1c1c1;
+    color: #111;
+}
+
+.cartIcon .btn {
+    border-radius: 5px;
+    background-color: rgb(17, 187, 45);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+}
