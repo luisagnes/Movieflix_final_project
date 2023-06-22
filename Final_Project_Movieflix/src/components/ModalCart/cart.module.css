@@ -1,0 +1,24 @@
+.btns{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    list-style: none;
+}
+
+.titleDiv {
+    text-align: center;
+}
+.titleModal{
+    margin-top: .3rem;
+    font-size: 1.1rem;
+}
+
+.btnModal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
